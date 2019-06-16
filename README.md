@@ -2,6 +2,11 @@
 
 Demostración de comunicación entre App y API REST usando Clean Arquitecture.
 
+Se ha dejado en un segundo plano el diseño, únicamente se ha centrado en la parte del código, mostrando Account Name, IBAN y Account Balance para cada una de las cuentas,
+a través de una custom view que permite diferencenciar si el dato contiene información o por el contrario está vacio o nulo , en cuyo caso no se mostrará el label correspondiente.
+
+Se añade un Switch personalizado para visualizar todas o sólo las cuentas ocultas
+
 Se ha utilizado mockable.io para  mockear el siguiente JSON:
 
 ```
@@ -51,6 +56,8 @@ Se ha utilizado mockable.io para  mockear el siguiente JSON:
 "returnCode" : "OK"
 }
 ```
+
+
 
 ## Estructura del proyecto
 
