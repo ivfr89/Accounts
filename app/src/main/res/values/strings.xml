@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Accounts</string>
+
+
+
+
+    <!--Common errors-->
+    <string name="no_connection">It seems that you currently don\'t have connectivity on your device, try again</string>
+    <string name="accounts_404">Server not found, please, contact administrator</string>
+
+    <string name="accounts_null">There a a problem retrieving the accounts data, please try later</string>
+
+    <!--Accounts-->
+    <string name="account_name">Account name</string>
+    <string name="account_IBAN">IBAN</string>
+    <string name="account_balance">Account balance</string>
+    <string name="view_all_accounts">All</string>
+    <string name="view_visible_accounts">Visible</string>
+    <string name="account_list">Account list</string>
+
+
+</resources>

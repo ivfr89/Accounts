@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.fernandez.players"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+}
+
+dependencies {
+    def mainAppDependencies = rootProject.ext.mainApplication
+    def androidX = rootProject.ext.androidX
+    def testing = rootProject.ext.testing
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation mainAppDependencies.kotlin
+    implementation mainAppDependencies.materialComponents
+    implementation mainAppDependencies.architectureLifecycle
+    implementation mainAppDependencies.materialDrawer
+    implementation mainAppDependencies.kotlinCoroutines
+    implementation mainAppDependencies.kotlinCoroutinesAndroid
+    implementation mainAppDependencies.retrofit
+    implementation mainAppDependencies.retrofitConverterGson
+    implementation mainAppDependencies.retrofitConverterScalars
+    implementation mainAppDependencies.loadingButton
+    implementation mainAppDependencies.glide
+    implementation mainAppDependencies.koin
+
+    implementation mainAppDependencies.okHttpLoginInterceptor
+    kapt mainAppDependencies.architectureLifecycleKt
+
+
+    implementation androidX.appCompat
+    implementation androidX.constraintLayout
+    implementation androidX.cardView
+
+
+
+//    Testing
+    testImplementation testing.junit
+    androidTestImplementation testing.testRunner
+    androidTestImplementation testing.espresso
+}
+
